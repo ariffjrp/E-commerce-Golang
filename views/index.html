@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cashier App</title>
+    <style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+    width: 500px;
+    height: 300px;
+    margin: 200px auto;
+}
+
+.glass {
+    background: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+#button:hover::before{
+    transform: scale(1);
+}
+
+#button-cotent::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
+    transition: all 0.475s;
+}
+
+    </style>
+</head>
+
+<body style="width: 100%; height: 100vh; background-color: #6B728E;">
+    <div class="container glass">
+        <div class="text">
+            <h1 style="padding: 12px; text-align: center; padding-top: 80px;">Welcome to Cahier App</h1>
+            <div class="containerbutton" style="padding: 50px; text-align: center;" >
+                <button id="button" style="padding: 5px; font-size: 18px; position: relative; overflow: hidden; height: 3rem; padding: 0 2rem; border-radius: 1.5rem; background: #3d384e; background-size: 400%; color: #fff;">
+                    <a id="button-content" href="/page/register" style="text-decoration: none; position: relative; z-index: 1; color: #fff">Register</a>
+                </button>
+                <button class="button" style="padding: 5px; font-size: 18px; position: relative; overflow: hidden; height: 3rem; padding: 0 2rem; border-radius: 1.5rem; background: #3d384e; background-size: 400%; color: #fff;">
+                    <a class="button-content" href="/page/login" style="text-decoration: none; position: relative; z-index: 1; color: #fff">Login</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
